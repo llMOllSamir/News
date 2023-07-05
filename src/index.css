@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Fenix&family=Inder&family=Roboto&display=swap");
+
+:root {
+  --main-color: #c7dcdd;
+  --sec-color: #0020b3;
+  --third-color: #9c7604;
+  --main-font: "Roboto";
+}
+#root {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url("./images/bodyBG.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: var(--main-font);
+  background-color: var(--main-color);
+}
+nav {
+  background-color: var(--main-color);
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+  font-family: "Fenix";
+  z-index: 3;
+}
+.nav-link {
+  font-family: "Inder";
+}
+@media all and (min-width: 992px) {
+  .nav-link.active::before {
+    width: 50%;
+  }
+  .nav-link:hover::before {
+    width: 50%;
+  }
+  .nav-link {
+    position: relative;
+    padding-bottom: 6px;
+  }
+  .nav-link::before {
+    content: "";
+    width: 0;
+    height: 1px;
+    background-color: var(--third-color);
+    position: absolute;
+    bottom: 0;
+    transition: all 0.5s;
+  }
+  .dropdown-toggle.nav-link::before,
+  .flag.nav-link::before {
+    background-color: transparent;
+  }
+}
+@media all and (max-width: 992px) {
+  .nav-link.active::before {
+    width: 10%;
+  }
+  .nav-link:hover::before {
+    width: 10%;
+  }
+  .nav-link {
+    position: relative;
+    padding-bottom: 6px;
+  }
+  .nav-link::before {
+    content: "";
+    width: 0;
+    height: 1px;
+    background-color: var(--third-color);
+    position: absolute;
+    bottom: 0;
+    transition: all 0.5s;
+  }
+  .dropdown-toggle.nav-link::before,
+  .flag.nav-link::before {
+    background-color: transparent;
+  }
+}
+
+.primary {
+  color: #0020b3;
+}
+.link {
+  color: black;
+  opacity: 0.7;
+  font-weight: 500;
+  text-decoration: none;
+  font-family: "Inter";
+}
+::-webkit-scrollbar {
+  background-color: black;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--main-color); /* or any color you prefer */
+}
+
+/* Target the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: gray; /* or any color you prefer */
+  border-radius: 50%; /* rounder edges */
+}
+
+/* Target the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--sec-color); /* or any color you prefer */
+}
+
+/* Target the scrollbar corner */
+::-webkit-scrollbar-corner {
+  background-color: #f1f1f1; /* or any color you prefer */
+}
+
+#weather {
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  position: absolute;
+  top: calc(100% + 80px);
+  font-family: var(--main-font);
+}
+
+@media all and (max-width: 992px) {
+  #weather {
+    position: relative;
+    top: 80px;
+  }
+  .control {
+    margin-top: 0;
+  }
+}
+
+#weather .weather-info {
+  color: var(--third-color);
+}
+
+input[type="search"] {
+  transition: all 0.8s;
+  background-color: transparent;
+}
+.control {
+  margin-top: 50px;
+}
+.current-weather {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

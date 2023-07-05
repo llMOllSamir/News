@@ -45,10 +45,8 @@ export default function ApiContextProvider({ children }) {
       .catch((err) => {
         if (apikeyIndex >= apiKey.length - 1) {
           setApiIndex(0);
-          getNews();
         } else {
           setApiIndex(apikeyIndex++);
-          getNews();
         }
       });
   };
